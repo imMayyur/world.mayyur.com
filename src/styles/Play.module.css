@@ -1,0 +1,27 @@
+.daily {
+  padding: 24px;
+  margin-bottom: 24px;
+  background: var(--grad);
+  color: #fff;
+  border: none;
+}
+.dailyLabel { text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; font-weight: 700; opacity: 0.9; margin-bottom: 12px; }
+.dailyBody { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.dailyFlag { width: 120px; flex: none; }
+.dailyFlag img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow); }
+.dailyName { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: #fff; }
+.dailyName:hover { text-decoration: underline; }
+.dailyMeta { opacity: 0.9; margin-top: 2px; }
+.dailyStats { display: flex; gap: 16px; margin-top: 10px; font-weight: 600; }
+.dailyCta { display: inline-block; margin-top: 14px; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); padding: 8px 16px; border-radius: 999px; font-weight: 600; }
+.dailyCta:hover { background: rgba(255,255,255,0.3); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.gameCard {
+  padding: 22px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius-lg);
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s; display: block;
+}
+.gameCard:hover { transform: translateY(-4px); border-color: var(--brand); box-shadow: var(--shadow); }
+.gameIcon { font-size: 34px; }
+.gameTitle { font-family: var(--font-display); font-weight: 700; font-size: 19px; margin-top: 10px; }
+.gameDesc { color: var(--text-soft); font-size: 14px; margin-top: 6px; line-height: 1.5; }

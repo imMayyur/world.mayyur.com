@@ -1,23 +1,160 @@
-.counts {
-  margin: 12px 0;
-  color: var(--text-color-secondary);
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 40px 0 28px;
+  overflow: hidden;
+}
+.heroGlow {
+  position: absolute;
+  inset: -40% 20% auto 20%;
+  height: 320px;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--brand) 26%, transparent), transparent);
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0.55;
+}
+.heroTitle {
+  font-size: clamp(40px, 7vw, 76px);
+  margin: 0;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heroSub {
+  max-width: 620px;
+  margin: 16px auto 0;
+  color: var(--text-soft);
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-.inputContainer {
-  margin-bottom: 40px;
+.searchWrap {
+  position: relative;
+  max-width: 620px;
+  margin: 28px auto 0;
+  display: flex;
+  align-items: center;
+}
+.searchIcon {
+  position: absolute;
+  left: 18px;
+  font-size: 18px;
+  opacity: 0.7;
+}
+.search {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 17px 48px 17px 50px;
+  font-size: 16px;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  outline: none;
+}
+.search::placeholder {
+  color: var(--text-faint);
+}
+.search:focus {
+  border-color: var(--brand);
+}
+.clear {
+  position: absolute;
+  right: 16px;
+  border: none;
+  background: var(--surface-2);
+  color: var(--text-soft);
+  border-radius: 999px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 720px) {
-  .inputContainer {
-    display: flex;
-    justify-content: space-between;
-  }
+.examples {
+  margin: 18px auto 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 760px;
+}
+.examplesLabel {
+  color: var(--text-faint);
+  font-size: 13px;
+}
+.example {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-soft);
+  border-radius: 999px;
+  padding: 7px 13px;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+.example:hover {
+  border-color: var(--brand);
+  color: var(--brand-strong);
+}
 
-  .counts {
-    flex: 1;
-  }
+.block {
+  margin-top: 44px;
+}
 
-  .input {
-    flex: 2;
-  }
+.count {
+  color: var(--text-faint);
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.smartNote {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.more {
+  text-align: center;
+  color: var(--text-faint);
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.recentRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.recentPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 7px 8px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-weight: 500;
+  font-size: 14px;
+}
+.recentPill:hover {
+  border-color: var(--brand);
+}
+.recentPill img {
+  width: 26px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 3px;
 }

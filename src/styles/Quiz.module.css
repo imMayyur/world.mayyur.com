@@ -1,0 +1,49 @@
+.header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-bottom: 18px; }
+.title { font-size: 34px; margin: 0; }
+.sub { color: var(--text-soft); margin: 6px 0 0; }
+
+.scoreboard { display: flex; gap: 20px; }
+.scoreboard > div { text-align: center; font-size: 12px; color: var(--text-soft); }
+.scoreboard span { display: block; font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--text); }
+
+.difficulty { display: flex; gap: 8px; margin-bottom: 18px; }
+.diff, .diffActive {
+  border: 1px solid var(--border); background: var(--surface); color: var(--text-soft);
+  border-radius: 999px; padding: 8px 16px; font-weight: 600; font-size: 14px; cursor: pointer;
+}
+.diff:hover { border-color: var(--brand); }
+.diffActive { background: var(--brand); color: #fff; border-color: var(--brand); }
+
+.card { padding: 26px; max-width: 620px; margin: 0 auto; }
+.loading { padding: 40px; text-align: center; color: var(--text-soft); }
+
+.flagWrap { display: flex; justify-content: center; margin-bottom: 22px; }
+.flag { width: 260px; max-width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow); }
+
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.option, .optionCorrect, .optionWrong, .optionDim {
+  padding: 15px; border-radius: 12px; font-weight: 600; font-size: 15px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text); text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+.option:hover { border-color: var(--brand); }
+.optionCorrect { background: var(--positive); border-color: var(--positive); color: #fff; cursor: default; }
+.optionWrong { background: #dc2626; border-color: #dc2626; color: #fff; cursor: default; }
+.optionDim { opacity: 0.5; cursor: default; }
+
+.feedback { margin-top: 20px; text-align: center; }
+.correct { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--positive); }
+.wrong { font-size: 16px; color: var(--text-soft); }
+.feedbackActions { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 16px; flex-wrap: wrap; }
+.learn { color: var(--brand-strong); font-weight: 600; font-size: 14px; }
+.nextBtn {
+  background: var(--brand); color: #fff; border: none; border-radius: 999px;
+  padding: 11px 22px; font-weight: 700; font-size: 15px; cursor: pointer;
+}
+.nextBtn:hover { background: var(--brand-strong); }
+
+.roundInfo { text-align: center; color: var(--text-faint); font-size: 13px; margin-top: 18px; }
+
+@media (max-width: 460px) {
+  .options { grid-template-columns: 1fr; }
+}

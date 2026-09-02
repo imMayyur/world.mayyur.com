@@ -1,0 +1,147 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.tab,
+.tabActive {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-soft);
+}
+.tab:hover {
+  border-color: var(--brand);
+}
+.tabActive {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.select {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.select:focus {
+  border-color: var(--brand);
+  outline: none;
+}
+.dirBtn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.dirBtn:hover {
+  border-color: var(--brand);
+}
+.count {
+  color: var(--text-faint);
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: none;
+}
+.row {
+  display: grid;
+  grid-template-columns: 44px 40px 1fr auto auto;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition:
+    border-color 0.15s,
+    transform 0.15s;
+}
+.row:hover {
+  border-color: var(--brand);
+  transform: translateX(3px);
+}
+.rank {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
+.flag {
+  width: 40px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.name {
+  font-weight: 600;
+}
+.region {
+  color: var(--text-soft);
+  font-size: 13px;
+}
+.value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 32px 34px 1fr auto;
+  }
+  .region {
+    display: none;
+  }
+}
+
+.liveBadge {
+  color: var(--positive);
+  font-size: 13px;
+  font-weight: 700;
+}
+.loading {
+  color: var(--text-soft);
+  font-style: italic;
+  padding: 24px 0;
+  text-align: center;
+}
+.sourceNote {
+  color: var(--text-faint);
+  font-size: 12px;
+  margin: 18px 0 0;
+  text-align: center;
+}
+.yr {
+  color: var(--text-faint);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 4px;
+}

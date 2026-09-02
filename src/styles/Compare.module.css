@@ -1,0 +1,133 @@
+.pickers {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.picker {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 220px;
+}
+.pickerLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+.select {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 13px 16px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.select:focus {
+  border-color: var(--brand);
+  outline: none;
+}
+.vs {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-faint);
+  padding-bottom: 12px;
+}
+
+.hint {
+  padding: 22px;
+  color: var(--text-soft);
+}
+
+.headline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.headCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  transition: border-color 0.15s;
+}
+.headCard:hover {
+  border-color: var(--brand);
+}
+.headFlag {
+  width: 72px;
+  flex: none;
+}
+.headFlag img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+.headName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+}
+.headMeta {
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+.mapCard {
+  padding: 22px;
+  margin-bottom: 18px;
+}
+.mapCard :global(svg) {
+  max-height: 440px;
+}
+.legendA {
+  color: var(--brand);
+}
+.legendB {
+  color: var(--accent);
+}
+
+.metrics {
+  padding: 22px;
+}
+.metricBlock {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.metricBlock:last-child {
+  border-bottom: none;
+}
+.metricTitle {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.insights {
+  padding: 22px;
+  margin-top: 18px;
+}
+.insightList {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  line-height: 1.9;
+}
+.disclaimer {
+  color: var(--text-faint);
+  font-size: 12px;
+  margin: 14px 0 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .headline {
+    grid-template-columns: 1fr;
+  }
+}

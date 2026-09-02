@@ -1,0 +1,26 @@
+.intro { color: var(--text-soft); max-width: 640px; line-height: 1.55; margin: 0 0 22px; }
+
+.pickers { display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; margin-bottom: 22px; }
+.picker { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 200px; }
+.picker span { font-size: 13px; font-weight: 600; color: var(--text-soft); }
+.picker select {
+  appearance: none; border: 1px solid var(--border); background: var(--surface);
+  color: var(--text); border-radius: 12px; padding: 12px 14px; font-size: 15px; cursor: pointer;
+}
+.picker select:focus { border-color: var(--brand); outline: none; }
+.arrow { font-family: var(--font-display); font-weight: 700; color: var(--text-faint); padding-bottom: 12px; }
+
+.result { padding: 24px; }
+.noRoute { color: var(--text-soft); margin: 0; line-height: 1.55; }
+.routeSummary { font-family: var(--font-display); font-weight: 700; font-size: 18px; margin-bottom: 16px; }
+
+.chain { list-style: none; margin: 0; padding: 0; }
+.step { display: flex; flex-direction: column; align-items: flex-start; }
+.stepLink {
+  display: flex; align-items: center; gap: 12px; padding: 10px 14px;
+  border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius);
+  font-weight: 600; transition: border-color 0.15s; width: 100%; max-width: 340px;
+}
+.stepLink:hover { border-color: var(--brand); }
+.stepLink img { width: 44px; aspect-ratio: 3/2; object-fit: cover; }
+.connector { color: var(--text-faint); margin: 4px 0 4px 24px; font-size: 18px; }

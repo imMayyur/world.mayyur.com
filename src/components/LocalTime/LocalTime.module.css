@@ -1,0 +1,12 @@
+.wrap { }
+.top { display: flex; align-items: baseline; gap: 10px; }
+.dayIcon { font-size: 22px; }
+.time {
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.meta { color: var(--text-soft); font-size: 14px; margin-top: 4px; }
+.multi { color: var(--text-faint); font-size: 12px; margin-top: 6px; }

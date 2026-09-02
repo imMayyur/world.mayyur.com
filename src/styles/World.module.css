@@ -1,0 +1,64 @@
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.factCard {
+  padding: 26px;
+  background: var(--grad);
+  color: #fff;
+  border: none;
+  margin-bottom: 30px;
+}
+.factEyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; font-weight: 700; opacity: 0.9; }
+.factText { font-family: var(--font-display); font-size: 22px; font-weight: 600; line-height: 1.35; margin: 10px 0 16px; }
+.factBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.factBtn:hover { background: rgba(255, 255, 255, 0.3); }
+
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 34px;
+}
+.panel { padding: 20px; }
+.panelTitle { font-size: 16px; margin: 0 0 12px; }
+.freqList { list-style: none; margin: 0; padding: 0; }
+.freqList li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.freqList li:last-child { border-bottom: none; }
+.freqList b { font-variant-numeric: tabular-nums; color: var(--brand-strong); }
+
+.collection { margin-bottom: 30px; }
+.seeAll { color: var(--brand-strong); font-weight: 600; font-size: 14px; }
+.topRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+.topItem {
+  display: grid;
+  grid-template-columns: auto 40px 1fr;
+  grid-template-areas: "rank flag name" "val val val";
+  align-items: center;
+  gap: 6px 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 12px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.topItem:hover { border-color: var(--brand); transform: translateY(-2px); }
+.topRank { grid-area: rank; font-family: var(--font-display); font-weight: 700; color: var(--text-faint); }
+.topItem img { grid-area: flag; width: 40px; aspect-ratio: 3/2; object-fit: cover; border-radius: 4px; }
+.topName { grid-area: name; font-weight: 600; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topVal { grid-area: val; color: var(--text-soft); font-size: 13px; font-variant-numeric: tabular-nums; }

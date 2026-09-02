@@ -1,0 +1,21 @@
+.header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-bottom: 16px; }
+.prompt { color: var(--text-soft); font-size: 17px; margin: 4px 0 0; }
+.prompt strong { color: var(--brand-strong); }
+
+.scoreboard { display: flex; gap: 20px; }
+.scoreboard > div { text-align: center; font-size: 12px; color: var(--text-soft); }
+.scoreboard span { display: block; font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--text); }
+
+.resultCard { padding: 20px; margin-top: 14px; text-align: center; }
+.resultMain { font-family: var(--font-display); font-size: 20px; font-weight: 700; }
+.resultSub { color: var(--text-soft); margin: 6px 0 16px; }
+
+.doneCard { padding: 40px 24px; text-align: center; }
+.doneTitle { font-size: 30px; margin: 0; }
+.doneSub { color: var(--text-soft); margin: 10px 0 20px; }
+
+.primary {
+  background: var(--brand); color: #fff; border: none; border-radius: 999px;
+  padding: 12px 24px; font-weight: 700; font-size: 15px; cursor: pointer;
+}
+.primary:hover { background: var(--brand-strong); }
